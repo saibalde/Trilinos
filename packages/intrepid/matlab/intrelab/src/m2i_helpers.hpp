@@ -48,7 +48,7 @@
 #include "Intrepid_HGRAD_TRI_C1_FEM.hpp"
 #include "Intrepid_HGRAD_TRI_C2_FEM.hpp"
 #include "Intrepid_HGRAD_QUAD_C1_FEM.hpp"
-#include "Intrepid_HGRAD_QUAD_C2_FEM.hpp"
+#include "Intrepid_HGRAD_QUAD_Cn_FEM.hpp"
 #include "Intrepid_HGRAD_TET_C1_FEM.hpp"
 #include "Intrepid_HGRAD_TET_C2_FEM.hpp"
 #include "Intrepid_HGRAD_HEX_C1_FEM.hpp"

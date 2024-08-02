@@ -127,9 +127,9 @@ std::string &descriptor)
         {
             basis = Teuchos::rcp(new Basis_HGRAD_LINE_C1_FEM<double, FieldContainer<double> >);
         }
-        else if(order == 2)
+        else
         {
-            basis = Teuchos::rcp(new Basis_HGRAD_LINE_Cn_FEM<double, FieldContainer<double> >(2, POINTTYPE_EQUISPACED));
+            basis = Teuchos::rcp(new Basis_HGRAD_LINE_Cn_FEM<double, FieldContainer<double> >(order, POINTTYPE_EQUISPACED));
         }
     }
     else if(cell_type == "Triangle")
@@ -149,9 +149,9 @@ std::string &descriptor)
         {
             basis = Teuchos::rcp(new Basis_HGRAD_QUAD_C1_FEM<double, FieldContainer<double> >);
         }
-        else if(order == 2)
+        else
         {
-            basis = Teuchos::rcp(new Basis_HGRAD_QUAD_C2_FEM<double, FieldContainer<double> >);
+          basis = Teuchos::rcp(new Basis_HGRAD_QUAD_Cn_FEM<double, FieldContainer<double> >(order, POINTTYPE_EQUISPACED));
         }
     }
     else if(cell_type == "Tetrahedron")
