@@ -142,6 +142,10 @@ std::string &descriptor)
         {
             basis = Teuchos::rcp(new Basis_HGRAD_TRI_C2_FEM<double, FieldContainer<double> >);
         }
+        else
+        {
+            basis = Teuchos::rcp(new Basis_HGRAD_TRI_Cn_FEM<double, FieldContainer<double> >(order, POINTTYPE_EQUISPACED));
+        }
     }
     else if(cell_type == "Quadrilateral")
     {
@@ -149,9 +153,13 @@ std::string &descriptor)
         {
             basis = Teuchos::rcp(new Basis_HGRAD_QUAD_C1_FEM<double, FieldContainer<double> >);
         }
+        else if(order == 2)
+        {
+            basis = Teuchos::rcp(new Basis_HGRAD_QUAD_C2_FEM<double, FieldContainer<double> >);
+        }
         else
         {
-          basis = Teuchos::rcp(new Basis_HGRAD_QUAD_Cn_FEM<double, FieldContainer<double> >(order, POINTTYPE_EQUISPACED));
+            basis = Teuchos::rcp(new Basis_HGRAD_QUAD_Cn_FEM<double, FieldContainer<double> >(order, POINTTYPE_EQUISPACED));
         }
     }
     else if(cell_type == "Tetrahedron")
@@ -164,6 +172,10 @@ std::string &descriptor)
         {
             basis = Teuchos::rcp(new Basis_HGRAD_TET_C2_FEM<double, FieldContainer<double> >);
         }
+        else
+        {
+            basis = Teuchos::rcp(new Basis_HGRAD_TET_Cn_FEM<double, FieldContainer<double> >(order, POINTTYPE_EQUISPACED));
+        }
     }
     else if(cell_type == "Hexahedron")
     {
@@ -174,6 +186,10 @@ std::string &descriptor)
         else if(order == 2)
         {
             basis = Teuchos::rcp(new Basis_HGRAD_HEX_C2_FEM<double, FieldContainer<double> >);
+        }
+        else
+        {
+            basis = Teuchos::rcp(new Basis_HGRAD_HEX_Cn_FEM<double, FieldContainer<double> >(order, POINTTYPE_EQUISPACED));
         }
     }
     else
