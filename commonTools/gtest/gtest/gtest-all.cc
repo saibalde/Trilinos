@@ -309,6 +309,7 @@ GTEST_DISABLE_MSC_WARNINGS_POP_()  //  4251
 #endif  // GTEST_INCLUDE_GTEST_GTEST_SPI_H_
 
 #include <ctype.h>
+#include <stdint.h>
 #include <math.h>
 #include <stdarg.h>
 #include <stdio.h>
